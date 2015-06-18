@@ -35,10 +35,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('ListCtrl', function($scope, NoteStore) {
 
+  $scope.reordering = false;
   $scope.notes = NoteStore.list();
 
   $scope.remove = function(noteId) {
     NoteStore.remove(noteId);
+  };
+
+  $scope.move = function(note, fromIndex, toIndex) {
+    //Para ver en consola el movimiento de las notas
+    //console.log('moving from' + fromIndex + 'to' + toIndex);
+    NoteStore.move(note, fromIndex, toIndex);
+  };
+
+  $scope.toggleReordering = function() {
+    $scope.reordering = !$scope.reordering;
   };
 
 });
