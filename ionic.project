@@ -1,4 +1,12 @@
 {
   "name": "my-notes",
-  "app_id": "99e4605c"
+  "app_id": "99e4605c",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

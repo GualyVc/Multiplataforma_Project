@@ -15,9 +15,22 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$stable:                          #9ACD32 !default;
+$energized:                         #FFCB0C !default;					  
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+
+$gualy: #FFBC3E;
+
+.notesBackground {
+	background-color: $gualy;
+}
+
+.editBackground {
+	background-color: #F5DA81;
+}
