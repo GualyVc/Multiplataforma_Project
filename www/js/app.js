@@ -7,7 +7,6 @@
 (function () {
 
 var app = angular.module('mynotes', ['ionic', 'mynotes.notestore']);
-//controlador para list
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -43,7 +42,7 @@ app.controller('ListCtrl', function($scope, NoteStore) {
   };
 
   $scope.move = function(note, fromIndex, toIndex) {
-    //Para ver en consola el movimiento de las notas
+    //Movimiento de items
     //console.log('moving from' + fromIndex + 'to' + toIndex);
     NoteStore.move(note, fromIndex, toIndex);
   };

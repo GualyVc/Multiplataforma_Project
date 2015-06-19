@@ -1,23 +1,28 @@
-<ion-view view-title="My Notes" ng-controller="ListCtrl"> 
+<ion-view view-title="Mis Notas" ng-controller="ListCtrl"> 
  <ion-content>
+    <!--
     <div class="padding">
-    <!--<div class="bar bar-header bar-stable">-->
-    	<a href="#/add" class="button button-calm icon-left ion-compose">New Note</a>
-    	<buton class="button button-light icon-left ion-navicon-round"
-    		ng-click="toggleReordering()">Reorder</button>
-    </div>
+    <div class="bar bar-header bar-stable">
+    <div class="bar bar-header">
+    -->
+    <ion-item class="padding bar bar-header">
+    	<a href="#/add" class="button button-small button-calm icon-left ion-compose">Nueva</a>
+    	<buton class="button button-small button-calm ion-navicon-round"
+    		ng-click="toggleReordering()"></button>
+    </ion-item>
+    
     <ion-list show-reorder="reordering">
     	<ion-item class="item-remove-animate item-icon-right"
         	href="#/edit/{{note.id}}" 
         	ng-repeat="note in notes track by note.id">
             <h2>{{note.title}}</h2>
             <p>{{note.description}}</p>
-            <i class="icon ion-code-working"></i>
+            <i class="icon ion-ios-arrow-right"></i>
             <ion-reorder-button class="ion-navicon" 
             	on-reorder="move(note, $fromIndex, $toIndex)">
             </ion-reorder-button>
             <ion-option-button class="button-assertive"
-              ng-click="remove(note.id)">Delete</ion-option-button>
+              ng-click="remove(note.id)">Borrar</ion-option-button>
         </ion-item>
     </ion-list>
  </ion-content>
